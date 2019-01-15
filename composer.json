@@ -1,0 +1,34 @@
+{
+  "name": "somov/yii2-requirements",
+  "description": "Yii2 system requirements",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "requirements",
+    "system"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Somov",
+      "email": "somov.nn@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": ">=2.0.14",
+    "somov/yii2-common": ">=1.0.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "somov\\requirements\\": "src"
+    }
+  },
+  "archive": {
+    "exclude": [
+      "/.*",
+      "/tests*",
+      "/vendor*",
+      "/bin*"
+    ]
+  }
+}
