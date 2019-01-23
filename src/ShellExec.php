@@ -21,7 +21,7 @@ class ShellExec extends RequirementBase
      */
     public function getName()
     {
-        return self::translate("Application {e} ", ['e'=>$this->executableFile]);
+        return self::translate("Application {e} ", ['e' => $this->executableFile]);
     }
 
     /**
@@ -29,6 +29,6 @@ class ShellExec extends RequirementBase
      */
     protected function check()
     {
-        return !empty(trim(shell_exec('which ' . $this->executableFile)));
+        return !empty(trim(shell_exec('type -P ' . $this->executableFile)));
     }
 }

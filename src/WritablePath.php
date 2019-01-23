@@ -42,9 +42,9 @@ class WritablePath extends RequirementBase
     protected function check()
     {
         foreach ($this->directories as $directory) {
-            $dir = \Yii::getAlias("$directory");
+            $dir = \Yii::getAlias($directory);
             if (!is_writable($dir)) {
-                $this->notWritable[] = dirname($dir);
+                $this->notWritable[] = $dir;
             }
         }
 
